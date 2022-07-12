@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+
+  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+  <link rel="stylesheet" href="styles/acesso.css">
+
+  <!-- ---------------------- lógica aplicada no registro -------------------- -->
+  <script src="/scripts/utils.js" defer></script>
+  <script src="/scripts/signup.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="left">
+    <img src="./assets/pessoa-signup.png" alt="">
+  </div>
+  <div class="right">
+    <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+
+      <label>
+        Nome:
+        <input type="text" id="name" onkeyup="validateName(event)" required>
+        <span id="msgNome"></span>
+      </label>
+      <label>
+        Sobrenome:
+        <input type="text" id="last-name" onkeyup="validateLastname(event)" required>
+        <span id="msgSobrenome"></span>
+      </label>
+      <label>
+        Email:
+        <input type="email" id="email" onkeyup="validateEmail(event)" required >
+        <span id="msgEmail"></span>
+      </label>
+      <label>
+        Senha:
+        <input type="password" id="password" onkeyup="validatePassword(event)" required >
+        <span id="msgPassword"></span>
+      </label>
+      <label>
+        Repetir senha:
+        <input type="password" id="repeat-password" onkeyup="validateRepeatPassword(event)" required >
+        <span id="msgPasswordConfirmation"></span>
+      </label>
+
+      <button id="btn" onclick="Submit(event)" disabled>Criar conta</button>
+
+    </form>
+    <div class="ingressar">
+      <a href="index.html">Já possui conta? Acesse aqui</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
